@@ -4,7 +4,7 @@ interface IBaseContext {
   appId: string
 }
 
-describe('middlewares', () => {
+describe('primitive', () => {
 
   const baseContext: IBaseContext = {
     appId: 'test-app-id',
@@ -29,7 +29,20 @@ describe('middlewares', () => {
     expect(ctx).toStrictEqual({ appId: 'test-app-id', a: { foo: 'foo' }, b: { bar: 10 } })
   })
 
-  test('two middlewares merge case', async () => {
+})
+
+
+describe('custom merge', () => {
+
+  const baseContext: IBaseContext = {
+    appId: 'test-app-id',
+  }
+
+  //TODO custom merge
+
+  const { createMiddleware, dependsOn } = middlewares<typeof baseContext>(customMerge)
+
+  test('two middlewares deep merge case', async () => {
 
     const aMiddleware = createMiddleware(async () => ({ sharedSpace: { foo: 'foo' } }))
     const bMiddleware = createMiddleware(async () => ({ sharedSpace: { bar: 10 } }))
@@ -39,3 +52,4 @@ describe('middlewares', () => {
   })
 
 })
+
