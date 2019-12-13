@@ -1,0 +1,20 @@
+{
+  "name": "@ebceu4pack/middleware-chain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ebceu4/middleware-chain.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ebceu4/middleware-chain/issues"
+  },
+  "homepage": "https://github.com/ebceu4/middleware-chain#readme"
+}
